@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script src="linkedinput.js"></script>
+  <script src="culc.js"></script>
+  <script>
+    function init() {
+      init_gacha();
+    }
+  </script>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="javascript:init()">
+  <h1>整地ガチャ 生成・期待値計算</h1>
+  <div id="main">
+    <div id="inputs" style="display:flex; width: 100%;">
+      <div style="flex:initial;">
+        <table>
+          <tr>
+            <td>種類</td>
+            <td>解体率</td>
+          </tr>
+          <tr>
+            <td>GT大当たり</td>
+            <td id="gtooatari"></td>
+          </tr>
+          <tr>
+            <td>大当たり</td>
+            <td id="ooatari"></td>
+          </tr>
+          <tr>
+            <td>当たり</td>
+            <td id="atari"></td>
+          </tr>
+        </table>
+      </div>
+      <div style="padding-left: 2em; flex: 1;">
+        <strong>当たり・大当たり解体 繰り返し回数</strong>
+        <div id="kaitai">
+        </div>
+        無限:<input type="checkbox" id="kaitai_inf">
+        <br>
+        <b>期待値を使用する(乱数を使用しない)</b><br>
+        <input type="checkbox" id="mean">
+      </div>
+    </div>
+    ガチャ券<input type="number" min="1" max="10000000000" step="1" value="1" id="ticket">枚で <button
+      onclick="javascript:run_gacha()">計算する</button>
+    <div id="result">
+
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

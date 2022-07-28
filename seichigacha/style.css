@@ -1,0 +1,29 @@
+.linkedInput[type="range"] {
+  width: 200px;
+}
+
+.linkedInput[type="number"] {
+  width: 3rem;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+#main {
+  font-size: large;
+}
+
+#inputs td {
+  text-align: right;
+  border-bottom: solid 1px #00000040;
+  border-top: solid 1px #00000040;
+}
+
+#inputs td:first-child {
+  border-right: solid 1px black;
+}
+
+#inputs table {
+  border-collapse: collapse;
+}
